@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View and Download Tutorials and Lectures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tutorials and Lectures</h1>
+    </header>
+    <main>
+        <section id="posts">
+            <h2>Posted Tutorials and Lectures</h2>
+            <div id="post-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 KMTC Mutomo Library. All rights reserved.</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        // Simulated data for tutorials and lectures
+        const posts = [
+            {
+                title: "Understanding HTML and CSS",
+                content: "This tutorial covers the basics of HTML and CSS, including structure, elements, and styles.",
+                category: "Tutorial",
+                file: "tutorials/understanding_html_css.pdf"
+            },
+            {
+                title: "JavaScript Basics",
+                content: "Learn the fundamentals of JavaScript, including variables, functions, and events.",
+                category: "Lecture",
+                file: "lectures/javascript_basics.pdf"
+            },
+            {
+                title: "Advanced CSS Techniques",
+                content: "Explore advanced CSS techniques including Flexbox and Grid Layout.",
+                category: "Tutorial",
+                file: "tutorials/advanced_css_techniques.pdf"
+            }
+        ];
+
+        // Function to display posts
+        function displayPosts() {
+            const postList = document.getElementById('post-list');
+            postList.innerHTML = ''; // Clear existing posts
+
+            posts.forEach(post => {
+                const postDiv = document.createElement('div');
+                postDiv.classList.add('post');
+                postDiv.innerHTML = `
+                    <h3>${post.title}</h3>
+                    <p>${post.content}</p>
+                    <p><strong>Category:</strong> ${post.category}</p>
+                    <p><strong>File:</strong> <a href="${post.file}" class="download-button" download>Download PDF</a></p>
+                `;
+                postList.appendChild(postDiv);
+            });
+        }
+
+        // Call the display function on page load
+        window.onload = displayPosts;
+    </script>
+</body>
+</html>

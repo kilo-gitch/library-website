@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>KMTC Mutomo Library Survey</h1>
+    </header>
+    
+    <main>
+        <section class="survey-form">
+            <h2>Library Survey</h2>
+            <p>Dear Patron,</p>
+            <p>The library is carrying out a survey on the level of satisfaction of its users in relation to services offered. The purpose of this survey is to obtain information about user views and opinions that would in turn assist the library management improve on its services.</p>
+            <p>Kindly help us gather this feedback by honestly filling the questionnaire. Do not indicate your name/Reg. No./PF No. anywhere in the form.</p>
+            <p>The question is on a scale of 1-5 on how satisfied/dissatisfied you are with the library services: Where: 5 - very satisfied 4 - Quite satisfied 3 Average 2 Quite dissatisfied 1 Very dissatisfied.</p>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+
+                    <label for="age">Age Bracket:</label>
+                    <select id="age" name="age">
+                        <option value="under-18">Under 18</option>
+                        <option value="18-24">18-24</option>
+                        <option value="25-34">25-34</option>
+                        <option value="35-44">35-44</option>
+                        <option value="45-54">45-54</option>
+                        <option value="55-64">55-64</option>
+                        <option value="65-plus">65+</option>
+                    </select>
+
+                    <label for="course">course:</label>
+                    <input type="text" id="course" name="course">
+        
+
+                    <label for="education">Level of Education:</label>
+                    <input type="text" id="education" name="education" required>
+                    <label for="access-mode">Which mode do you use to access library services and resources?</label>
+                    <select id="access-mode" name="access-mode" required>
+                        <option value="telephone">By Telephone</option>
+                        <option value="in-person">In person</option>
+                        <option value="chat">Chat/ask a librarian</option>
+                        <option value="email">Email</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="all">All of the above</option>
+                    </select>
+
+                    <label for="contact">How do you mostly contact the library?</label>
+                    <select id="contact" name="contact" required>
+                        <option value="telephone">By Telephone</option>
+                        <option value="in-person">In person</option>
+                        <option value="chat">Chat/ask a librarian</option>
+                        <option value="email">Email</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="all">All of the above</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Service Satisfaction</legend>
+
+                    <label for="response">How would you judge the response to your request when you last visited the library?</label>
+                    <select id="response" name="response" required>
+                        <option value="prompt">Prompt</option>
+                        <option value="satisfactory">Satisfactory</option>
+                        <option value="unsatisfactory">Unsatisfactory</option>
+                        <option value="other">Other:</option>
+                    </select>
+
+                    <label for="visit-frequency">How often do you visit your library?</label>
+                    <select id="visit-frequency" name="visit-frequency" required>
+                        <option value="daily">Daily</option>
+                        <option value="every-2-3-days">Every 2-3 days</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="fortnightly">Fortnightly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="rarely">Rarely</option>
+                        <option value="never">Never</option>
+                    </select>
+
+                    <label for="non-regular-reasons">If you do not use the library regularly, list the reasons that prevent you from being a regular user:</label>
+                    <textarea id="non-regular-reasons" name="non-regular-reasons"></textarea>
+
+                    <label>How would you describe the library collection?</label>
+                    <div>
+                        <input type="radio" id="current-yes" name="collection-current" value="yes">
+                        <label for="current-yes">Current</label>
+                        <input type="radio" id="current-no" name="collection-current" value="no">
+                        <label for="current-no">Not Current</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="relevancy-yes" name="collection-relevancy" value="yes">
+                        <label for="relevancy-yes">Relevant</label>
+                        <input type="radio" id="relevancy-no" name="collection-relevancy" value="no">
+                        <label for="relevancy-no">Not Relevant</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="sufficiency-yes" name="collection-sufficiency" value="yes">
+                        <label for="sufficiency-yes">Sufficient</label>
+                        <input type="radio" id="sufficiency-no" name="collection-sufficiency" value="no">
+                        <label for="sufficiency-no">Not Sufficient</label>
+                    </div>
+
+                    <label>Which of the listed library services do you use most?</label>
+                    <select id="services" name="services" required>
+                        <option value="ejournals">E-journals</option>
+                        <option value="ebooks">eBooks</option>
+                        <option value="pastpapers">Past Papers</option>
+                        <option value="opac">OPAC (Library Catalogue)</option>
+                        <option value="ir">Institutional Repository (IR)</option>
+                        <option value="reference">Reference Services</option>
+                        <option value="borrowing">Borrowing Services</option>
+                        <option value="reprographic">Reprographic (Photocopy, Printing, Binding, Scanning)</option>
+                        <option value="online-help">Online Help Services</option>
+                        <option value="internet">Internet Connectivity Services</option>
+                    </select>
+
+                    <label for="circulation-services">How satisfied are you with our CIRCULATION SERVICES?</label>
+                    <select id="circulation-services" name="circulation-services" required>
+                        <option value="5">5 [Very Satisfied]</option>
+                        <option value="4">4 [Quite Satisfied]</option>
+                        <option value="3">3 [Average]</option>
+                        <option value="2">2 [Quite Dissatisfied]</option>
+                        <option value="1">1 [Very Dissatisfied]</option>
+                        <option value="dont-know">Don't Know</option>
+                    </select>
+                    <label for="circulation-comments">Comments/suggestions on service:</label>
+                    <textarea id="circulation-comments" name="circulation-comments"></textarea>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Further Suggestions</legend>
+                    <label for="suggestions">Please provide any additional comments or suggestions:</label>
+                    <textarea id="suggestions" name="suggestions"></textarea>
+                </fieldset>
+
+                <button type="submit">Submit Survey</button>
+            </form>
+        </section>
+    </main>
+       <footer>
+         <h4>&copy; 2024 KMTC Mutomo Library. All rights reserved.</h4>
+       </footer>
+</body>
+</html>
